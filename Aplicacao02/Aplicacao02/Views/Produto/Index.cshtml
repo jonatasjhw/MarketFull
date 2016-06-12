@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Aplicacao02.Models.Produto>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Fornecedor.NomeFornecedor)*@
+            Nome do Produto
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.NomeProduto)*@
+            Preço   
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Preco)*@
+            Descrição
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Descricao)*@
+            Fornecedor
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeProduto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Preco)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descricao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fornecedor.NomeFornecedor)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IDProduto }, htmlAttributes: new { @class = "btn btn-success" }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IDProduto }, htmlAttributes: new { @class = "btn btn-default" }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IDProduto }, htmlAttributes: new { @class = "btn btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>
