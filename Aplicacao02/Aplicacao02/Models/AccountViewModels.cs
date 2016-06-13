@@ -33,7 +33,7 @@ namespace Aplicacao02.Models
         public string Code { get; set; }
         public string ReturnUrl { get; set; }
 
-        [Display(Name = "Remember this browser?")]
+        [Display(Name = "Salvar nesse navegador?")]
         public bool RememberBrowser { get; set; }
 
         public bool RememberMe { get; set; }

@@ -19,7 +19,7 @@ namespace Portabilidade_Projeto.DAL
         public DbSet<Produto> Produto { get; set; }
         public DbSet<Fornecedor> Fornecedor { get; set; }
 
-        // Evita pluralização dos nomes da variavel DbSet.
+        // Evita pluralização dos nomes da variavel DbSet. Ex: Produto'es'
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
