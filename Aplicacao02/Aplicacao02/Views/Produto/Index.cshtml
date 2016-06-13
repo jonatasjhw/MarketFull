@@ -7,7 +7,7 @@
 <h2>Produtos</h2>
 
 <p>
-    @Html.ActionLink("Criar novo Produto", "Create")
+    @Html.ActionLink("Criar novo Produto", "Create", "Produto", htmlAttributes: new { @class = "btn btn-success" })
 </p>
 <table class="table">
     <tr>
@@ -46,9 +46,9 @@
             @Html.DisplayFor(modelItem => item.Fornecedor.NomeFornecedor)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IDProduto }, htmlAttributes: new { @class = "btn btn-success" }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IDProduto }, htmlAttributes: new { @class = "btn btn-default" }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IDProduto }, htmlAttributes: new { @class = "btn btn-primary" })
+            @Html.ActionLink("Editar", "Edit", new { id=item.IDProduto }, htmlAttributes: new { @class = "btn btn-default" }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.IDProduto }, htmlAttributes: new { @class = "btn btn-default" }) |
+            @Html.ActionLink("Deletar", "Delete", new { id=item.IDProduto }, htmlAttributes: new { @class = "btn btn-primary" })
         </td>
     </tr>
 }
