@@ -9,7 +9,7 @@ namespace Aplicacao02
         {
             filters.Add(new HandleErrorAttribute());
             // Aqui eu bloqueio todos os acessos não autorizados!
-          //  filters.Add(new AuthorizeAttribute());
+            filters.Add(new AuthorizeAttribute());
         }
     }
 }
